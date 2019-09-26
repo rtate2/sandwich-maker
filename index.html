@@ -5,12 +5,32 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-    <link rel="stylesheet" href="./main.css">
+    <link rel="stylesheet" href="./styles/main.css">
     <title>Sandwich Maker</title>
 </head>
 <body>
-    <h1>Sandwich Maker</h1>
+    <div class="sandwich-title">
+        <h1>Sandwich Maker</h1>
+    </div>
+    <div class="container">
+    <div class="row">
+        <div>
+            <h5>Bread</h5>
+            <div id="bread-selection" class=""></div>
+        </div>
+        <div id="meat-selection"></div>
+        <div id="cheese-selection"></div>
+        <div id="condiments-selection"></div>
+        <div id="veggies-selection"></div>
+    </div>
 
-    <script type="module" src="./main.js"></script>
+    <div class="row">
+            <div id="entire-sandwich" class="col-6"></div>
+    </div>
+
+
+
+    </div>
+    <script type="module" src="./javascripts/main.js"></script>
 </body>
 </html>
