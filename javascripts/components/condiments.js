@@ -7,6 +7,19 @@ const condiments = [
     {id: 'condiments4', name: 'vinaigrette', price: 50}
 ];
 
+const getSelectedCondiments = () => {
+    const selectedCondiments = [];
+    const condimentCheckboxes = document.getElementsByClassName('condiments');
+        for (let i = 0; i < condimentCheckboxes.length; i++) {
+            for (let k = 0; k < condiments.length; k++) {
+                if (condimentCheckboxes[i].checked && condimentCheckboxes[i].id === condiments[k].id) {
+                    selectedCondiments.push(condiments[k]);
+                }
+            }
+        }
+        return selectedCondiments;
+};
+
 const printCondimentOptions = () => {
     let domString = '';
     for (let i = 0; i < condiments.length; i++) {
@@ -20,4 +33,4 @@ const printCondimentOptions = () => {
     utilities.printToDom('condiments-selection', domString)
 }
 
-export default { printCondimentOptions }
+export default { printCondimentOptions, getSelectedCondiments }
