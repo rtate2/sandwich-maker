@@ -8,6 +8,19 @@ const meats = [
     {id: 'meats4', name: 'tuna', price: 500},
 ]
 
+const getSelectedMeat = () => {
+    const selectedMeat = [];
+    const meatCheckboxes = document.getElementsByClassName('meat');
+        for (let i = 0; i < meatCheckboxes.length; i++) {
+            for (let k = 0; k < meats.length; k++) {
+                if (meatCheckboxes[i].checked && meatCheckboxes[i].id === meats[k].id) {
+                    selectedMeat.push(meats[k]);
+                }
+            }
+        }
+        return selectedMeat;
+};
+
 const printMeatOptions = () => {
     let domString = '';
     for (let i = 0; i < meats.length; i++) {
@@ -21,4 +34,4 @@ const printMeatOptions = () => {
     utilities.printToDom('meat-selection', domString);
 };
 
-export default { printMeatOptions }
+export default { printMeatOptions, getSelectedMeat }

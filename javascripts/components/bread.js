@@ -9,6 +9,19 @@ const breads = [
     {id: 'bread4', name: 'Italian', price: 250},
 ];
 
+const getSelectedBread = () => {
+    const selectedBread = [];
+    const breadCheckboxes = document.getElementsByClassName('bread');
+        for (let i = 0; i < breadCheckboxes.length; i++) {
+            for (let k = 0; k < breads.length; k++) {
+                if (breadCheckboxes[i].checked && breadCheckboxes[i].id === breads[k].id) {
+                    selectedBread.push(breads[k]);
+                }
+            }
+        }
+        return selectedBread;
+};
+
 const printBreadOptions = () => {
     let domString = '';
     for (let i = 0; i < breads.length; i++) {
@@ -22,4 +35,4 @@ const printBreadOptions = () => {
     utilities.printToDom('bread-selection', domString)
 };
 
-export default { printBreadOptions }
+export default { printBreadOptions, getSelectedBread }

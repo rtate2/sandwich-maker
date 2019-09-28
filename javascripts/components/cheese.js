@@ -7,6 +7,19 @@ const cheeses = [
     {id: 'cheese4', name: 'Cheddar', price: 100},
 ];
 
+const getSelectedCheese = () => {
+    const selectedCheese = [];
+    const cheeseCheckboxes = document.getElementsByClassName('cheese');
+        for (let i = 0; i < cheeseCheckboxes.length; i++) {
+            for (let k = 0; k < cheeses.length; k++) {
+                if (cheeseCheckboxes[i].checked && cheeseCheckboxes[i].id === cheeses[k].id) {
+                    selectedCheese.push(cheeses[k]);
+                }
+            }
+        }
+        return selectedCheese;
+};
+
 const printCheeseOptions = () => {
     let domString = '';
     for (let i = 0; i < cheeses.length; i++) {
@@ -20,4 +33,4 @@ const printCheeseOptions = () => {
     utilities.printToDom('cheese-selection', domString)
 }
 
-export default { printCheeseOptions }
+export default { printCheeseOptions, getSelectedCheese }
