@@ -1,10 +1,10 @@
 import utilities from "../helpers/utilities.js";
 
 const veggies = [
-    {id: 'veggies1', name: 'onion', price: 35},
-    {id: 'veggies2', name: 'tomato', price: 35},
-    {id: 'veggies3', name: 'spinach', price: 35},
-    {id: 'veggies4', name: 'olives', price: 35}
+    {id: 'veggies1', name: 'Onion', price: 35},
+    {id: 'veggies2', name: 'Tomato', price: 35},
+    {id: 'veggies3', name: 'Spinach', price: 35},
+    {id: 'veggies4', name: 'Olives', price: 35}
 ];
 
 const getSelectedVeggies = () => {
