@@ -7,10 +7,19 @@ import veggies from "./veggies.js";
 
 const createFinalOrder = (items) => {
     let domString2 = '';
+    let sum = 0;
     for (let i = 0; i < items.length; i++) {
-        domString2 += `<h2>${items[i].name}</h2>`;
+        let priceNumber = items[i].price
+        sum += priceNumber;
+        priceNumber /= 100;
+        let dollars = priceNumber.toLocaleString("en-US", {style:"currency", currency:"USD"});
+        domString2 += `<h5>${items[i].name} ${dollars}</h5>`;
     };
-    utilities.printToDom('entire-sandwich', domString2)
+    sum /= 100;
+    const totalDollars = sum.toLocaleString("en-US", {style:"currency", currency: "USD"});
+    domString2 += `<hr><h4>Your total is: ${totalDollars}</h4></div>`;
+    utilities.printToDom('total', domString2);
+    // utilities.printToDom('entire-sandwich', domString2)
 };
 
 const makeSandwichEvent = () => {

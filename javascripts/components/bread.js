@@ -3,9 +3,9 @@ import utilities from '../helpers/utilities.js'
 
 // creating the array of bread
 const breads = [
-    {id: 'bread1', name: 'wheat', price: 200},
-    {id: 'bread2', name: 'white', price: 200},
-    {id: 'bread3', name: 'honey-oat', price: 250},
+    {id: 'bread1', name: 'Wheat', price: 200},
+    {id: 'bread2', name: 'White', price: 200},
+    {id: 'bread3', name: 'Honey-oat', price: 250},
     {id: 'bread4', name: 'Italian', price: 250},
 ];
 
